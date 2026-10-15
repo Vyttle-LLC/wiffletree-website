@@ -2,11 +2,15 @@ import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 
+// The Google subsets lack some glyphs the page uses (→, ●). An explicit
+// fallback list sends those to the system fonts, as in the original, instead
+// of next/font's metric-adjusted Arial.
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-instrument-sans",
   display: "swap",
+  fallback: ["ui-sans-serif", "system-ui", "sans-serif"],
 });
 
 const geistMono = Geist_Mono({
@@ -14,6 +18,7 @@ const geistMono = Geist_Mono({
   weight: ["400", "500"],
   variable: "--font-geist-mono",
   display: "swap",
+  fallback: ["ui-monospace", "monospace"],
 });
 
 const description =

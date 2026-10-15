@@ -1,3 +1,4 @@
+import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import SectionHeading from "@/components/SectionHeading";
 import { eventLog, type LogEntry, type LogTone } from "@/lib/content";
@@ -15,7 +16,7 @@ const mono = "var(--font-mono)";
 export default function EventLog() {
   return (
     <section id="how" style={{ padding: "0 24px 160px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "56px 80px" }}>
+      <Container style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "56px 80px" }}>
         <div style={{ flex: "1 1 400px", minWidth: 0 }}>
           <Eyebrow>UNDER THE HOOD</Eyebrow>
           <SectionHeading style={{ textWrap: "balance" }}>Nothing gets lost between agents.</SectionHeading>
@@ -59,7 +60,7 @@ export default function EventLog() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

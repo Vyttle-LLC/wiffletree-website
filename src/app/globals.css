@@ -35,8 +35,9 @@
   --nav-edge: rgba(73, 96, 99, 0.55);
   --frame-bg: rgba(34, 55, 62, 0.7);
 
-  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  /* Fallback lists live with the font loaders in layout.tsx */
+  --font-sans: var(--font-instrument-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 /* ==================== BASE ==================== */
@@ -112,7 +113,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sea-glass); out
 
 /* Goal → coordinator packet, on its own 3s loop */
 .wt-line { position: relative; width: 2px; margin: 0 auto; background: var(--edge); }
-.wt-pkt { position: absolute; left: -2px; width: 6px; height: 6px; border-radius: 50%; opacity: 0; animation-duration: 9s; animation-timing-function: linear; animation-iteration-count: infinite; }
+.wt-pkt { position: absolute; left: -2px; width: 6px; height: 6px; border-radius: 50%; opacity: 0; animation-duration: 3s; animation-timing-function: linear; animation-iteration-count: infinite; }
 .wt-pkt-down { background: var(--accent); box-shadow: 0 0 10px var(--accent); animation-name: wt-down; }
 @keyframes wt-down {
   0% { top: -3px; opacity: 0; }

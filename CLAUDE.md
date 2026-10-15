@@ -23,7 +23,7 @@ Marketing website for **Wiffletree**, a native Mac workspace where Claude and Co
 
 - `src/app/` — layout (metadata, fonts), page, `globals.css` (tokens, keyframes, responsive rules)
 - `src/components/` — one component per page section, plus small shared pieces
-- `src/lib/content.ts` — all page copy, links and repeated data
+- `src/lib/content.ts` — repeated data and links
 
 ## Coding Conventions
 
@@ -33,4 +33,4 @@ Marketing website for **Wiffletree**, a native Mac workspace where Claude and Co
 - **Colors:** use CSS custom properties (`var(--text)`) via inline `style`; never use signal red outside the logo files
 - **Responsive overrides** in `globals.css` use `!important` to beat inline styles
 - **Animation rules** that set only timing must use longhands; the CSS minifier rewrites a name-less `animation` shorthand to `none`
-- **Content:** import from `@/lib/content`, not hardcoded per section
+- **Repeated data and links:** import from `@/lib/content`, not hardcoded per section

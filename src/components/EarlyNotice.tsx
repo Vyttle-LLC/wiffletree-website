@@ -1,12 +1,11 @@
+import Container from "@/components/Container";
 import { links } from "@/lib/content";
 
 export default function EarlyNotice() {
   return (
     <section style={{ padding: "160px 24px 0" }}>
-      <div
+      <Container
         style={{
-          maxWidth: 1200,
-          margin: "0 auto",
           padding: "28px 32px",
           border: "1px solid var(--edge)",
           borderRadius: 18,
@@ -44,7 +43,7 @@ export default function EarlyNotice() {
           <a href={links.currentLimits}>Current limits →</a>
           <a href={links.roadmap}>Roadmap →</a>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

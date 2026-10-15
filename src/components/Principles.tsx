@@ -1,3 +1,4 @@
+import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import SectionHeading from "@/components/SectionHeading";
 import { principles } from "@/lib/content";
@@ -6,7 +7,7 @@ import { principles } from "@/lib/content";
 export default function Principles() {
   return (
     <section id="principles" className="wt-light" style={{ background: "var(--light-canvas)", color: "var(--light-text)", padding: "140px 24px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <Container>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end", gap: "24px 64px" }}>
           <div style={{ flex: "1 1 520px" }}>
             <Eyebrow color="var(--light-rust)">PRINCIPLES</Eyebrow>
@@ -44,7 +45,7 @@ export default function Principles() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import SectionHeading from "@/components/SectionHeading";
 import { policies, type PolicyKind } from "@/lib/content";
@@ -8,11 +9,10 @@ const ICONS: Record<PolicyKind, { stroke: string; path: string; round: boolean }
   caution: { stroke: "var(--warning)", path: "M7 3v5M7 10.6v.1", round: false },
 };
 
-// What it will and won't do.
 export default function Policies() {
   return (
     <section style={{ padding: "160px 24px 0" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", flexWrap: "wrap", gap: "40px 80px" }}>
+      <Container style={{ display: "flex", flexWrap: "wrap", gap: "40px 80px" }}>
         <div style={{ flex: "1 1 420px" }}>
           <Eyebrow>WHAT IT WILL AND WON’T DO</Eyebrow>
           <SectionHeading>Merging stays yours.</SectionHeading>
@@ -49,7 +49,7 @@ export default function Policies() {
             );
           })}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

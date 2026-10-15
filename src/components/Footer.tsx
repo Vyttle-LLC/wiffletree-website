@@ -1,10 +1,11 @@
+import Container from "@/components/Container";
 import Lockup from "@/components/Lockup";
 import { footerColumns } from "@/lib/content";
 
 export default function Footer() {
   return (
     <footer style={{ borderTop: "1px solid var(--edge)", padding: "56px 24px 48px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 40 }}>
+      <Container style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 40 }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 16, flex: "1 1 260px" }}>
           <Lockup height={22} style={{ alignSelf: "flex-start" }} />
           <p style={{ margin: 0, fontSize: 14, color: "var(--muted)" }}>© 2026 Vyttle LLC · Released under the MIT License</p>
@@ -21,7 +22,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

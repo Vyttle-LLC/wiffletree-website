@@ -1,16 +1,14 @@
+import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import { nativeFacts } from "@/lib/content";
 
 const mono = "var(--font-mono)";
 
-// "Bring your own CLI" and "Native", side by side.
 export default function Platform() {
   return (
     <section style={{ padding: "160px 24px 0" }}>
-      <div
+      <Container
         style={{
-          maxWidth: 1200,
-          margin: "0 auto",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(min(460px, 100%), 1fr))",
           gap: 28,
@@ -41,7 +39,7 @@ export default function Platform() {
             ))}
           </div>
         </Card>
-      </div>
+      </Container>
     </section>
   );
 }

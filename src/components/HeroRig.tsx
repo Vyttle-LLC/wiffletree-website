@@ -67,7 +67,7 @@ export default function HeroRig() {
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="wt-line" aria-hidden="true" style={{ height: 32 }}>
-          <span className="wt-pkt wt-pkt-down" style={{ animationDuration: "3s" }} />
+          <span className="wt-pkt wt-pkt-down" />
         </div>
         <div
           style={{

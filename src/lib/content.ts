@@ -1,5 +1,4 @@
-// Page copy and data. All copy comes from the Wiffletree repo README; all
-// links point at real GitHub URLs.
+// Page data and links.
 
 const REPO = "https://github.com/Vyttle-LLC/wiffletree";
 

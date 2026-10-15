@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ButtonLink from "@/components/ButtonLink";
+import Container from "@/components/Container";
 import DownloadButton from "@/components/DownloadButton";
 import HeroRig from "@/components/HeroRig";
 import { ArrowUpRightIcon } from "@/components/icons";
@@ -10,11 +11,9 @@ export default function Hero() {
   return (
     <section id="top" style={{ position: "relative", padding: "112px 24px 0" }}>
       <div className="wt-dots" aria-hidden="true" style={{ position: "absolute", inset: "0 0 auto 0", height: 900, pointerEvents: "none" }} />
-      <div
+      <Container
         style={{
           position: "relative",
-          maxWidth: 1200,
-          margin: "0 auto",
           display: "flex",
           flexWrap: "wrap",
           alignItems: "center",
@@ -66,9 +65,9 @@ export default function Hero() {
         </div>
 
         <HeroRig />
-      </div>
+      </Container>
 
-      <div className="wt-rise wt-rise-4" style={{ position: "relative", maxWidth: 1200, margin: "80px auto 0" }}>
+      <Container className="wt-rise wt-rise-4" style={{ position: "relative", margin: "80px auto 0" }}>
         <div
           aria-hidden="true"
           style={{
@@ -102,7 +101,7 @@ export default function Hero() {
             style={{ display: "block", width: "100%", height: "auto", borderRadius: 12 }}
           />
         </figure>
-      </div>
+      </Container>
     </section>
   );
 }
