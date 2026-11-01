@@ -193,27 +193,63 @@ export type Screen = { tab: string; src: string; alt: string; caption: string };
 export const screens: Screen[] = [
   {
     tab: "Agents",
-    src: "/screens/tickets.png",
-    alt: "The Agents panel beside the coordinator’s chat, listing three tickets by stage with their agents, models and progress",
+    src: "/screens/agents.png",
+    alt: "The Agents panel beside the coordinator’s chat, listing two open tickets by stage with their agents, models and progress",
     caption: "Every ticket gets its own branch, implementer and independent reviewers.",
   },
   {
     tab: "Who runs what",
     src: "/screens/models.png",
-    alt: "The Models page: when a subscription runs low, and the Who runs what table, with a first choice, a next choice and a Right now column for each job",
+    alt: "The Models page’s Who runs what table, with a first choice, a next choice, a small-work line and a Right now column for each job from Coordinator to Router",
     caption: "You decide who runs each job, and what happens when a subscription runs low.",
   },
   {
     tab: "Usage",
     src: "/screens/usage.png",
-    alt: "The Usage page with Claude and Codex 5-hour and weekly limits above a week of daily tokens",
-    caption: "Provider limits side by side, above the tokens your agents used each day.",
+    alt: "The Usage page with Claude and Codex 5-hour and weekly account limits above seven days of token totals, an estimated API cost and a breakdown by model",
+    caption: "Account limits from the providers, above the tokens your agents used by model.",
   },
   {
     tab: "Context",
     src: "/screens/context.png",
-    alt: "An implementer Context card showing how full its context window is, by category, with a Compact button",
+    alt: "The coordinator’s Overview panel with a Context card showing how full its context window is, by category, with a Compact button",
     caption: "See what fills an agent’s context, and compact it when you choose.",
+  },
+  {
+    tab: "Spaces",
+    src: "/screens/spaces.png",
+    alt: "The Spaces page with the Tidepool Space open, showing what belongs in it, its brain, brain gate, code repositories and sources, beside the Personal Space",
+    caption: "Each Space keeps its own brain, repositories, issues and agent settings.",
+  },
+  {
+    tab: "Brain",
+    src: "/screens/brain.png",
+    alt: "The brain browser’s Status view for the Tidepool brain, with its status note beside its compile times and five pending entries",
+    caption: "Read a Space’s brain in the app, from its status note to its wiki, logs and conflicts.",
+  },
+  {
+    tab: "Issues",
+    src: "/screens/issues.png",
+    alt: "The Issues page as a board, with TIDE issues in Triage, Backlog, Todo and In progress columns, each with its priority and labels",
+    caption: "A tracker for ideas, bugs and requests, kept in the Space’s own repository.",
+  },
+  {
+    tab: "Assistant",
+    src: "/screens/assistant.png",
+    alt: "An assistant thread in the Tidepool Space answering a status question from its brain, then saving two outputs to Boards",
+    caption: "The assistant answers in read-only threads, and saves what you ask for to Boards.",
+  },
+  {
+    tab: "Boards",
+    src: "/screens/boards.png",
+    alt: "The Boards page listing six outputs from jobs and threads, each with a preview, its Space, where it came from, when it changed and where it is kept",
+    caption: "Everything your threads and scheduled jobs save, in one place.",
+  },
+  {
+    tab: "Behaviors",
+    src: "/screens/behaviors.png",
+    alt: "The Behaviors page at Workspace scope, with stock settings for coordinators and implementers as switches and menus, and additions for each role",
+    caption: "Stock defaults for how your agents work, changed where you need them.",
   },
 ];
 
