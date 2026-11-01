@@ -31,7 +31,7 @@ export default function Header() {
           <a href="#top" aria-label="Wiffletree home" style={{ display: "flex", alignItems: "center" }}>
             <Lockup height={24} />
           </a>
-          <div className="wt-hide-sm" style={{ display: "flex", alignItems: "center", gap: 32, fontSize: 14, fontWeight: 500 }}>
+          <div className="wt-hide-sm" style={{ display: "flex", alignItems: "center", gap: "clamp(16px, 2vw, 32px)", fontSize: 14, fontWeight: 500, whiteSpace: "nowrap" }}>
             {navLinks.map((link) => (
               <a key={link.href} className="wt-navlink" href={link.href}>
                 {link.label}
@@ -39,7 +39,7 @@ export default function Header() {
             ))}
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <ButtonLink href={links.repo} variant="ghost" size="sm" className="wt-hide-sm">
+            <ButtonLink href={links.repo} variant="ghost" size="sm" className="wt-hide-md">
               GitHub
               <ArrowUpRightIcon size={12} />
             </ButtonLink>

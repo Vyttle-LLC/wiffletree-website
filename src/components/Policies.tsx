@@ -15,9 +15,9 @@ export default function Policies() {
       <Container style={{ display: "flex", flexWrap: "wrap", gap: "40px 80px" }}>
         <div style={{ flex: "1 1 420px" }}>
           <Eyebrow>WHAT IT WILL AND WON’T DO</Eyebrow>
-          <SectionHeading>Merging stays yours.</SectionHeading>
+          <SectionHeading>Protected branches stay yours.</SectionHeading>
           <p style={{ margin: "20px 0 0", maxWidth: 460, fontSize: 16, lineHeight: 1.6, color: "var(--text-subtle)" }}>
-            Wiffletree opens the pull request. The merge button is yours.
+            Wiffletree pushes reviewed work and opens the pull request. Only you merge into main.
           </p>
         </div>
         <div style={{ flex: "1 1 520px", display: "flex", flexDirection: "column", borderTop: "1px solid var(--edge)" }}>

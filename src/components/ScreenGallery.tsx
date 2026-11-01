@@ -26,38 +26,35 @@ export default function ScreenGallery() {
 
   return (
     <>
-      <div style={{ marginTop: 48, display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "16px 32px" }}>
-        <div
-          role="tablist"
-          aria-label="App screens"
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 6,
-            padding: 5,
-            border: "1px solid var(--edge)",
-            borderRadius: 14,
-            background: "var(--well)",
-          }}
-        >
-          {screens.map((screen, i) => (
-            <button
-              key={screen.tab}
-              type="button"
-              className="wt-tab"
-              role="tab"
-              id={`wt-tab-${i}`}
-              aria-controls={PANEL_ID}
-              aria-selected={i === current}
-              onClick={() => pick(i)}
-            >
-              {screen.tab}
-            </button>
-          ))}
-        </div>
-        <p aria-live="polite" style={{ margin: 0, maxWidth: 520, fontSize: 16, lineHeight: 1.5, color: "var(--text-subtle)" }}>
-          {screens[current].caption}
-        </p>
+      <div
+        role="tablist"
+        aria-label="App screens"
+        style={{
+          marginTop: 48,
+          width: "fit-content",
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 6,
+          padding: 5,
+          border: "1px solid var(--edge)",
+          borderRadius: 14,
+          background: "var(--well)",
+        }}
+      >
+        {screens.map((screen, i) => (
+          <button
+            key={screen.tab}
+            type="button"
+            className="wt-tab"
+            role="tab"
+            id={`wt-tab-${i}`}
+            aria-controls={PANEL_ID}
+            aria-selected={i === current}
+            onClick={() => pick(i)}
+          >
+            {screen.tab}
+          </button>
+        ))}
       </div>
       <div style={{ position: "relative", marginTop: 28 }}>
         <div
@@ -89,6 +86,9 @@ export default function ScreenGallery() {
           </div>
         </div>
       </div>
+      <p aria-live="polite" style={{ margin: "16px 2px 0", fontSize: 16, lineHeight: 1.5, color: "var(--text-subtle)" }}>
+        {screens[current].caption}
+      </p>
     </>
   );
 }

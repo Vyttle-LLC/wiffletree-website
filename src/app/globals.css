@@ -56,6 +56,8 @@ a:hover { color: var(--text); }
 .wt-light a:hover { color: var(--light-text); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--sea-glass); outline-offset: 3px; border-radius: 8px; }
 ::selection { background: var(--accent); color: var(--canvas); }
+/* These sections have no top padding, so nav jumps clear the sticky header here */
+#how, #spaces, #brain, #issues, #assistant { scroll-margin-top: 100px; }
 
 /* ==================== DECOR & CONTROLS ==================== */
 
@@ -183,7 +185,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sea-glass); out
 
 /* ==================== EVENT LOG ====================
    The rows render twice; sliding up by half loops without a seam. */
-.wt-log { animation: wt-log 34s linear infinite; }
+.wt-log { animation: wt-log 39s linear infinite; }
 @keyframes wt-log { from { transform: translateY(0); } to { transform: translateY(-50%); } }
 .wt-logmask {
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 18%, #000 82%, transparent 100%);
@@ -194,8 +196,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sea-glass); out
    Layouts collapse through flex-wrap and auto-fit grids; these only tune
    chrome and spacing. !important beats the inline styles. */
 
+@media (max-width: 920px) {
+  .wt-hide-md { display: none !important; }
+}
+
 @media (max-width: 820px) {
   .wt-hide-sm { display: none !important; }
+  .wt-board { grid-template-columns: minmax(0, 1fr) !important; }
 }
 
 @media (max-width: 560px) {

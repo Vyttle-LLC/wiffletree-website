@@ -1,5 +1,7 @@
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
+import Lede from "@/components/Lede";
+import Panel from "@/components/Panel";
 import SectionHeading from "@/components/SectionHeading";
 import { eventLog, type LogEntry, type LogTone } from "@/lib/content";
 
@@ -20,45 +22,33 @@ export default function EventLog() {
         <div style={{ flex: "1 1 400px", minWidth: 0 }}>
           <Eyebrow>UNDER THE HOOD</Eyebrow>
           <SectionHeading style={{ textWrap: "balance" }}>Nothing gets lost between agents.</SectionHeading>
-          <p style={{ margin: "20px 0 0", maxWidth: 420, fontSize: 17, lineHeight: 1.55, color: "var(--text-subtle)" }}>
+          <Lede style={{ maxWidth: 420 }}>
             Every message is saved before it’s acknowledged. Restart the app and each agent resumes its exact session.
-          </p>
+          </Lede>
         </div>
         <div
           role="img"
-          aria-label="A scrolling event log: a goal is planned, implemented, the app restarts, the tester resumes its session, tests pass, and the merge waits for you."
-          style={{
-            flex: "1 1 520px",
-            minWidth: 0,
-            border: "1px solid var(--edge)",
-            borderRadius: 22,
-            background: "var(--well)",
-            overflow: "hidden",
-          }}
+          aria-label="A scrolling event log: the coordinator reads the brain and plans a goal, an implementer builds it, the app restarts, a reviewer resumes its exact session, reviews pass, the decision is logged to the brain, and the open pull request waits for you to merge into main."
+          style={{ flex: "1 1 520px", minWidth: 0 }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              padding: "14px 20px",
-              borderBottom: "1px solid var(--surface)",
-            }}
+          <Panel
+            label="EVENTS · TIDE ALERTS"
+            status={
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 8, letterSpacing: "normal", color: "var(--success)" }}>
+                <span className="wt-pulse" style={{ width: 6, height: 6, borderRadius: "50%", background: "currentColor" }} />
+                live
+              </span>
+            }
           >
-            <span style={{ fontFamily: mono, fontSize: 11, letterSpacing: "0.08em", color: "var(--muted)" }}>EVENTS · TIDE ALERTS</span>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 8, fontFamily: mono, fontSize: 11, color: "var(--success)" }}>
-              <span className="wt-pulse" style={{ width: 6, height: 6, borderRadius: "50%", background: "currentColor" }} />
-              live
-            </span>
-          </div>
-          <div className="wt-logmask" aria-hidden="true" style={{ height: 420, overflow: "hidden", padding: "0 20px" }}>
-            {/* Two copies: .wt-log slides up by exactly one copy, then repeats. */}
-            <div className="wt-log">
-              {[...eventLog, ...eventLog].map((entry, i) => (
-                <LogRow key={i} entry={entry} />
-              ))}
+            <div className="wt-logmask" aria-hidden="true" style={{ height: 420, overflow: "hidden", padding: "0 20px" }}>
+              {/* Two copies: .wt-log slides up by exactly one copy, then repeats. */}
+              <div className="wt-log">
+                {[...eventLog, ...eventLog].map((entry, i) => (
+                  <LogRow key={i} entry={entry} />
+                ))}
+              </div>
             </div>
-          </div>
+          </Panel>
         </div>
       </Container>
     </section>

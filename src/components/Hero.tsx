@@ -46,7 +46,7 @@ export default function Hero() {
               textWrap: "pretty",
             }}
           >
-            A native Mac workspace where Claude and Codex agents work as a team.
+            A native Mac workspace where Claude and Codex agents work as a team, and remember what they learned.
           </p>
           <div className="wt-rise wt-rise-4" style={{ marginTop: 40, display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>
             <DownloadButton />
